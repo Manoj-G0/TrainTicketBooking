@@ -12,14 +12,14 @@ public class GetTrainsDAO {
     public static List<Train> getTrainsBetweenStations(int sourceId, int destinationId) {
         List<Train> trains = new ArrayList<>();
         List<Station> st = GetStationsDAO.getAllStations();
-        Train rajdhani = new Train(1, "12951", "Rajdhani Express", 500);
-		rajdhani.setStations(Arrays.asList(st.get(0), st.get(1)));
+        Train ratnachal = new Train(1, "12951", "ratnachal Express", 500);
+		ratnachal.setStations(Arrays.asList(st.get(0), st.get(1)));
         
-        Train shatabdi = new Train(2, "12009", "Shatabdi Express", 400);
-        shatabdi.setStations(Arrays.asList(st.get(2), st.get(3)));
+        Train kachiguda = new Train(2, "12009", "kachiguda Express", 400);
+        kachiguda.setStations(Arrays.asList(st.get(2), st.get(3)));
         
-        trains.add(rajdhani);
-        trains.add(shatabdi);
+        trains.add(ratnachal);
+        trains.add(kachiguda);
 //        String sql = "SELECT t.id, t.number, t.name, t.total_seats " +
 //                     "FROM trains t " +
 //                     "JOIN train_stations ts1 ON t.id = ts1.train_id AND ts1.station_id = ? " +
